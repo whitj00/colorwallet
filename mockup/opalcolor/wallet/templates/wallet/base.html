@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% block title %}<title>{{ page_title|default:"Opal Colored Coins Wallet" }}</title>{% endblock%}
+    <link href="{% static 'wallet/bootstrap.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'wallet/style.css' %}" rel="stylesheet" media="all">
+  </head>
+  <body>
+    <div id="cont">
+      <header>
+      </header>
+      <div id="sep"></div>
+      <div id="wrapper">
+        <div id="logorow" class="row">
+          <div class="col-md-2">
+	    <img src="{% static 'wallet/images/logo.png' %}" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p><button>B1</button></p>
+            <p><button>B2</button></p>
+            <p><button>B3</button></p>
+            <p><button>B4</button></p>
+          </div>
+          <div class="col-md-9 col-md-offset-1">
+	    {% block main_data %}
+	    Main Data Goes Here
+	    {% endblock %}
+        </div>
+      </div>
+    <footer>
+      icons
+    </footer>
+  </div>
+</body>
+</html>
