@@ -18,20 +18,37 @@
         </div>
         <div class="row">
           <div class="col-md-2">
-            <p><button><span class="glyphicon glyphicon-briefcase"></span>Account</button></p>
-            <p><button><span class="glyphicon glyphicon-usd"></span>Send Money</button></p>
-            <p><button><span class="glyphicon glyphicon-transfer"></span>Transactions</button></p>
-            <p><button><span class="glyphicon glyphicon-star"></span>Assets</button></p>
+            <p><a href="{% url 'wallet.views.account' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-briefcase"></span>
+		</div>Account</button></a>
+	    </p> <!-- /button -->
+	    <p><a href="{% url 'wallet.views.send' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-arrow-right"></span>
+		</div>Send Money</button></a>
+	    </p> <!-- /button -->
+            <p><a href="{% url 'wallet.views.transactions' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-transfer"></span>
+		</div>Transactions</button></a>
+	    </p> <!-- /button -->
+            <p><a href="{% url 'wallet.views.assets' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-star"></span>
+		</div>Assets</button></a>
+	    </p> <!-- /button -->
           </div>
           <div class="col-md-9 col-md-offset-1">
+	    <div id="balance">Total Balance</div>
 	    {% block main_data %}
 	    Main Data Goes Here
 	    {% endblock %}
         </div>
       </div>
-    <footer>
-      icons
-    </footer>
+    <!-- <footer> -->
+    <!--   icons -->
+    <!-- </footer> -->
   </div>
 </body>
 </html>

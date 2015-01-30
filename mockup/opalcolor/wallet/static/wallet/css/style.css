@@ -53,10 +53,14 @@ button {
   color: #000000;
   font-size: 20px;
   background: f4f3f4;
-  padding: 10px 20px 10px 20px;
+  /* padding: 10px 20px 10px 20px; */
   border: solid #000000 1px;
   text-decoration: none;
   margin-bottom: 15px;
+  padding:0px;
+  padding-left:0px;
+  line-height:50px;
+  height:49px;
 }
 
 button:hover {
@@ -98,7 +102,22 @@ table tr:nth-child(even) {background: #e7e7eb}
 table tr:nth-child(odd) {background: #ecedef}
 
 #newaddr {
-  float: right;
-  width: 160px;
+  width: 180px;
   margin-top: 30px;
+}
+
+.button-icon {
+    margin:0;
+    padding:0;
+    border-radius: 3px;
+    color: #000000;
+    font-size: 20px;
+    background: f4f3f4;
+    border: solid #000000 1px;
+    display: inline-block;
+    margin-left:-1px;
+    height:49px;
+    width:49px;
+    line-height:55px;
+    margin:-1px;
 }
