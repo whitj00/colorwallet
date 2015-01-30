@@ -1,40 +1,36 @@
 {% extends "wallet/base.html"  %}
 {% block main_data %}
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-      <th>Label</th>
-      <th>Balance</th>
-      <th>Confirmed Balance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-    </tr>
-    <tr>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-    </tr>
-    <tr>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-    </tr>
-  </tbody>
-</table>
-<p><a href="#"><button id="newaddr" class="pull-right">
-      <div class="button-icon pull-left">
-	<span class="glyphicon glyphicon-plus-sign"></span>
-      </div>New Address</button></a>
-</p> <!-- /button -->
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="fromField" class="col-sm-2 control-label">From:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="fromField" placeholder="Opal Address">
+    </div>
+  </div> <!-- /form-group -->
+  <div class="form-group">
+    <label for="toField" class="col-sm-2 control-label">To:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="toField" placeholder="Opal Address">
+    </div>
+  </div> <!-- /form-group -->
+  <div class="form-group">
+    <label for="amountField" class="col-sm-2 control-label">Amount:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="amountField" placeholder="Opal Amount">
+    </div>
+  </div> <!-- /form-group -->
+  <div class="form-group">
+    <label for="feeField" class="col-sm-2 control-label">Fee:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="feeField" placeholder="Opal Amount">
+    </div>
+  </div> <!-- /form-group -->
+</form>
 
-<!-- <p><button id="newaddr" class="pull-right">New Address</button></p> -->
+
+<p><a href="#"><button class="control-button pull-right">
+      <div class="button-icon2 pull-left">
+	<span class="glyphicon glyphicon-arrow-right"></span>
+      </div>Send</button></a>
+</p> <!-- /button -->
 {% endblock %}

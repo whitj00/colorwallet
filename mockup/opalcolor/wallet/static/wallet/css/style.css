@@ -94,20 +94,20 @@ table th {
 }
 
 table td {
-  padding-left: 10px;
-  padding-right: 10px;
+    padding:2px 10px;
 }
 
 table tr:nth-child(even) {background: #e7e7eb}
 table tr:nth-child(odd) {background: #ecedef}
 
-#newaddr {
-  width: 180px;
-  margin-top: 30px;
+.control-button {
+    width:auto;
+    margin-top: 30px;
+    padding-right:20px;
+    margin-left:20px;
 }
 
 .button-icon {
-    margin:0;
     padding:0;
     border-radius: 3px;
     color: #000000;
@@ -120,4 +120,23 @@ table tr:nth-child(odd) {background: #ecedef}
     width:49px;
     line-height:55px;
     margin:-1px;
+}
+
+.button-icon2 {
+    padding:0;
+    border-radius: 3px;
+    color: #000000;
+    font-size: 20px;
+    background: f4f3f4;
+    /* border: solid #000000 1px; */
+    display: inline-block;
+    margin-left:-1px;
+    height:49px;
+    width:49px;
+    line-height:55px;
+    margin:-1px;
+}
+
+.wallet-form-label {
+    /* text-align:left; */
 }
