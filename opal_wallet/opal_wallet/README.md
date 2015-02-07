@@ -1,0 +1,1 @@
+# Make sure to .gitignore settings.py once project is ready for deployment and change secret key

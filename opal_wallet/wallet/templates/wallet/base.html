@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% block title %}<title>{{ page_title|default:"Opal Colored Coins Wallet" }}</title>{% endblock%}
+    <link href="{% static 'wallet/css/bootstrap.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'wallet/css/style.css' %}" rel="stylesheet" media="all">
+  </head>
+  <body>
+    <div id="cont">
+      <div id="sep"></div>
+      <div id="wrapper">
+        <div id="logorow" class="row">
+          <div class="col-md-2">
+	    <img src="{% static 'wallet/images/logo.png' %}" />
+          </div>
+          <div class="col-md-10">
+	    <span class="pull-right">Logged in as {{ user.username }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <p><a href="{% url 'account' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-briefcase"></span>
+		</div>Account</button></a>
+	    </p> <!-- /button -->
+	    <p><a href="{% url 'send' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-send"></span>
+		</div>Send Money</button></a>
+	    </p> <!-- /button -->
+            <p><a href="{% url 'transactions' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-transfer"></span>
+		</div>Transactions</button></a>
+	    </p> <!-- /button -->
+            <p><a href="{% url 'assets' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-star"></span>
+		</div>Assets</button></a>
+	    </p> <!-- /button -->
+	    <p><a href="{% url 'logout' %}"><button>
+		<div class="button-icon pull-left">
+		  <span class="glyphicon glyphicon-off"></span>
+		</div>Logout</button></a>
+	    </p> <!-- /button -->
+
+          </div>
+          <div class="col-md-9 col-md-offset-1">
+	    <div id="balance">Total Balance: {{ balance }}</div>
+	    {% block main_data %}
+	    Main Data Goes Here
+	    {% endblock %}
+        </div>
+      </div>
+    <!-- <footer> -->
+    <!--   icons -->
+    <!-- </footer> -->
+  </div>
+</body>
+</html>

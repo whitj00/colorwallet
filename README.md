@@ -1,5 +1,5 @@
 # Colored Coins Web Wallet For Opal
 
-Currently working on an HTML mockup using Django templates. The mockup application is found in `./mockup/opalcolor/`.
-
 This project uses Python 3. Use pip to install Python dependencies.
+
+Make sure opalcoind is on PATH or add the directory wallet_functions.py, make sure to comment out or change existing directory.
