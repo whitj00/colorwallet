@@ -11,27 +11,38 @@
     </tr>
   </thead>
   <tbody>
+    {% for tx in txs %}
     <tr>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
+      <td>{{ tx.confirmations }}</td>
+      <td>{{ tx.blocktime }}</td>
+      <td>{{ tx.category }}</td>
+      <td>{{ tx.address }}</td>
+      <td>{{ tx.amount }}</td>
     </tr>
-    <tr>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-    </tr>
-    <tr>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-      <td>data</td>
-    </tr>
+    
+    {% endfor %}
+    
+    <!-- <tr> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!-- </tr> -->
+    <!-- <tr> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!-- </tr> -->
+    <!-- <tr> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!--   <td>data</td> -->
+    <!-- </tr> -->
   </tbody>
 </table>
 

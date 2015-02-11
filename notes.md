@@ -60,3 +60,6 @@ Created a custom Django Form for POST data validation and sanitation for sending
 
 Creating custom form fields for Opal addresses would be a good idea.
 
+# Wed Feb 11 05:43:47 CST 2015 -
+
+- Get/parse transactions from opalcoind and format for template.

@@ -30,3 +30,7 @@ def send_opal(transaction):
         transaction = transation.replace(" ", "_")
     return subprocess.call(['opalcoind', 'sendfrom', from_address, transaction['to_address'], transaction['amount']])
 
+def list_transactions():
+    tx = subprocess.check_output(['opalcoind', 'listtransactions'])
+    return json.loads(tx.decode())
+    

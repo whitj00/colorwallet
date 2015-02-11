@@ -33,7 +33,10 @@ def send(request):
     return render(request, 'wallet/send.html', context)
 
 def transactions(request):
-    context = {'page_title':'Transactions'}
+    txs = wallet_functions.list_transactions()
+    # context = {'test':txs}
+    # return render(request, 'wallet/test.html', context)
+    context = {'page_title':'Transactions', 'txs':txs}
     return render(request, 'wallet/transactions.html', context)
 
 def assets(request):
