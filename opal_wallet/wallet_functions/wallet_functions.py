@@ -34,7 +34,7 @@ def list_accounts():
 def send_opal(transaction):
     if transaction['from_address'] == 'Main account': from_address = ""
     else:
-        transaction = transation.replace(" ", "_")
+        transaction = transaction.replace(" ", "_")
     return subprocess.call(['opalcoind', 'sendfrom', from_address, transaction['to_address'], transaction['amount']])
 
 def get_time(unix_timestamp):
