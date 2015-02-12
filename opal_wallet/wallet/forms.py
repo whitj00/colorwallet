@@ -3,7 +3,7 @@ from django import forms
 from wallet_functions import wallet_functions
 
 class OpalSendForm(forms.Form):
-    accounts = wallet_functions.list_accounts()
+    accounts = wallet_functions.list_accounts()[0]
     account_choices = []
     for account in accounts:
         new_choice = (account, account)

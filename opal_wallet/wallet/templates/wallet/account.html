@@ -3,13 +3,21 @@
 <table>
   <thead>
     <tr>
-      <th>Address</th>
       <th>Label</th>
+      <th>Address</th>
+      <th>Confirmations</th>
       <th>Balance</th>
-      <th>Confirmed Balance</th>
     </tr>
   </thead>
   <tbody>
+    {% for account in accounts %}
+    <tr>
+      <td>{{ account.account }}</td>
+      <td>{{ account.address }}</td>
+      <td>{{ account.confirmations }}</td>
+      <td>{{ account.balance }}</td>
+    </tr>
+    {% endfor %}
     <tr>
       <td>data</td>
       <td>data</td>

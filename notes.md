@@ -60,6 +60,20 @@ Created a custom Django Form for POST data validation and sanitation for sending
 
 Creating custom form fields for Opal addresses would be a good idea.
 
-# Wed Feb 11 05:43:47 CST 2015 -
+# Wed Feb 11 05:43:47 CST 2015 - Wed Feb 11 07:15:14 CST 2015 (1.5 hours)
 
-- Get/parse transactions from opalcoind and format for template.
+DONE:
+
+Created function to get transcations from opalcoind and return to the 'transactions' view of the wallet app. Converted raw transaction data to show readable timestamp and 8 decimal float values for transaction amounts. Added transaction data to the 'transactions' template.
+
+List accounts and balances on 'Accounts' page using `listaccounts` command, 90% done getting full account history using `listunspent`
+
+# Wed Feb 11 15:58:58 CST 2015 - Wed Feb 11 17:04:27 CST 2015 
+
+List uses `listunspent` and gets the account for each address.
+
+Each page load is pretty slow because it has to run all of the opalcoind subprocesses, so I'm going to make a 'load wallet' that will run all of the opalcoind calls at one time and keep the data in memory, then I'll add a context processor, so all of the other views can load very quickly.
+
+Using Redis to store wallet data (unspent outputs, transactions, etc).
+
+Making a quick installation video.

@@ -12,7 +12,10 @@ def index(request):
     return render(request, 'wallet/index.html', context)
 
 def account(request):
-    context = {'page_title':'Accounts'}
+    accounts = wallet_functions.list_unspent()
+    # context = {'test':accounts}
+    # return render(request, 'wallet/test.html', context)
+    context = {'page_title':'Accounts', 'accounts':accounts}
     return render(request, 'wallet/account.html', context)
 
 def send(request):
@@ -28,14 +31,11 @@ def send(request):
     else:
         form = OpalSendForm(initial={'from_address': 'Main account'})
 
-    accounts = wallet_functions.list_accounts()
     context = {'page_title':'Send Money', 'form':form}
     return render(request, 'wallet/send.html', context)
 
 def transactions(request):
     txs = wallet_functions.list_transactions()
-    # context = {'test':txs}
-    # return render(request, 'wallet/test.html', context)
     context = {'page_title':'Transactions', 'txs':txs}
     return render(request, 'wallet/transactions.html', context)
 
