@@ -3,6 +3,8 @@ import json
 import subprocess
 from datetime import datetime
 
+from wallet_functions import opal_cache
+
 # Change this to the Opal path
 opal_path = ":/Users/tom/tmp/tmp/OpalCoin/src"
 
@@ -71,6 +73,11 @@ def list_unspent():
         unspent.append({'account':account, 'address': address,
                         'confirmations':amt['confirmations'], 'balance':balance})
     return unspent
+
+def update_stats(user):
+    balance = get_balance()
+    opal_cache.set_stats(user, {'balance': balance})
     
 # context = {'test':test}
 # return render(request, 'wallet/test.html', context)
+
