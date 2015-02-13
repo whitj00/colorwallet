@@ -77,3 +77,13 @@ Each page load is pretty slow because it has to run all of the opalcoind subproc
 Using Redis to store wallet data (unspent outputs, transactions, etc).
 
 Making a quick installation video.
+
+# Fri Feb 13 11:54:21 CST 2015
+
+Connecting Django app to Redis datastore.
+
+Saving balance in Redis using a Redis hash with request.user as the key.
+
+Existing context processor for retrieving balance now gets the balance value from Redis, instead of running `opalcoind`.
+
+`wallet.update` view calls `wallet_functions.update_stats` which adds a dictionary of stats to Redis using request.user as the key.

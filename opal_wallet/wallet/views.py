@@ -11,13 +11,18 @@ def index(request):
     context = {'page_title':'Index Page'}
     return render(request, 'wallet/index.html', context)
 
+@login_required
+def update(request):
+    wallet_functions.update_stats(request.user)
+    return redirect(index)
+
+@login_required
 def account(request):
     accounts = wallet_functions.list_unspent()
-    # context = {'test':accounts}
-    # return render(request, 'wallet/test.html', context)
     context = {'page_title':'Accounts', 'accounts':accounts}
     return render(request, 'wallet/account.html', context)
 
+@login_required
 def send(request):
     if request.method == 'POST':
         form = OpalSendForm(request.POST)
@@ -34,11 +39,13 @@ def send(request):
     context = {'page_title':'Send Money', 'form':form}
     return render(request, 'wallet/send.html', context)
 
+@login_required
 def transactions(request):
     txs = wallet_functions.list_transactions()
     context = {'page_title':'Transactions', 'txs':txs}
     return render(request, 'wallet/transactions.html', context)
 
+@login_required
 def assets(request):
     context = {'page_title':'Index Page'}
     return render(request, 'wallet/assets.html', context)
