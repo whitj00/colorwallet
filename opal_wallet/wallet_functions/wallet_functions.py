@@ -6,7 +6,7 @@ from datetime import datetime
 from wallet_functions import opal_cache
 
 # Change this to the Opal path
-opal_path = ":/Users/tom/tmp/tmp/OpalCoin/src"
+opal_path = "/Users/whit/opalCoin/src"
 
 os.environ['PATH'] += opal_path
 
